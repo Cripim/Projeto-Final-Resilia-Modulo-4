@@ -14,7 +14,7 @@ const db = new sqlite3.Database("./src/infra/database.db");
 // Exemplo
 // ⇓⇓⇓⇓⇓⇓⇓
 
-const CreateTableExemplo = `
+const createTabelaPlanoA = `
 CREATE TABLE IF NOT EXISTS "Exemplo" (
   "ID" INTEGER PRIMARY KEY AUTOINCREMENT,
   "NOME" varchar(64),
@@ -35,11 +35,11 @@ CREATE TABLE IF NOT EXISTS "Exemplo" (
 // ⇓⇓⇓⇓⇓⇓⇓
 
 const PopulatingTableExemplo = `
-INSERT INTO Exemplo (NOME, EMAIL, SENHA, VALOR, SEXO)
+INSERT INTO Exemplo (NOME, TIPO_PLANO, DESCRICAO, VALOR)
 VALUES 
-("Marlon", "marlon@marlon.com", "????????", 1000, "M"),
-("Isabela", "isabela@isabela.com", "????????", 2000, "F"),
-("Diego", "diego@diego.com", "????????", 3000, "M"),
+("PLANO A", "basic", "a", 1000, "M"),
+("PLANO B", "isabela@isabela.com", "????????", 2000, "F"),
+("PLANO C", "diego@diego.com", "????????", 3000, "M"),
 ("Gustavo", "gustavo@gustavo.com", "????????", 4000, "M");
 `;
 
